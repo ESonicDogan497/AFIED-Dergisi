@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            overflow-x: hidden; /* Yatay kaydırmayı engellemek için */
         }
         header {
             background-color: #63084f;
@@ -48,8 +49,8 @@
             justify-content: center;
             align-items: center;
             margin: 20px auto;
-            background-color: #f4f4f4; /* Çerçeve arka plan rengi */
-            overflow: hidden; /* Taşmaları engellemek için */
+            background-color: #f4f4f4;
+            overflow: hidden;
         }
         .page {
             display: flex;
@@ -62,8 +63,8 @@
         }
         .page img {
             display: block;
-            max-width: auto; /* Görselin genişliği, bulunduğu alanı aşmaz */
-            max-height: auto; /* Görselin yüksekliği, bulunduğu alanı aşmaz */
+            max-width: 100%; /* Görselin genişliği, bulunduğu alanı aşmaz */
+            max-height: 100%; /* Görselin yüksekliği, bulunduğu alanı aşmaz */
             object-fit: contain; /* Görselin orijinal oranını korur ve alanın içinde kalır */
             margin: 0;
             padding: 0;
@@ -86,37 +87,25 @@
         }
 
         /* Ekran boyutuna göre uyumlu sayfa düzeni */
-        @media (max-width: 768px) { /* Tablet ve daha küçük ekranlar için */
+        @media (max-width: 768px) {
             .flipbook {
                 width: 90vw;  /* Sayfa genişliği %90 ekranın */
                 height: 90vh; /* Sayfa yüksekliği %90 ekranın */
             }
-
             .page {
                 width: 100%;  /* Sayfa genişliğini ekrana sığdır */
                 height: 100%; /* Sayfa yüksekliğini ekrana sığdır */
             }
-
-            .page img {
-                max-width: 100%;  /* Görselin genişliği tam ekran genişliğine sığar */
-                max-height: 100%; /* Görselin yüksekliği tam ekran yüksekliğine sığar */
-            }
         }
 
-        @media (max-width: 480px) { /* Mobil ekranlar için */
+        @media (max-width: 480px) {
             .flipbook {
                 width: 95vw;  /* Sayfa genişliği %95 ekranın */
                 height: 95vh; /* Sayfa yüksekliği %95 ekranın */
             }
-
             .page {
-                width: 100%;  /* Sayfa genişliğini ekrana sığdır */
-                height: 100%; /* Sayfa yüksekliğini ekrana sığdır */
-            }
-
-            .page img {
-                max-width: 100%;  /* Görselin genişliği tam ekran genişliğine sığar */
-                max-height: 100%; /* Görselin yüksekliği tam ekran yüksekliğine sığar */
+                width: 100%;
+                height: 100%;
             }
         }
     </style>
@@ -162,7 +151,7 @@
                 "AFIED2024/kapak1.png", "AFIED2024/kapak2.png", "AFIED2024/1.png", "AFIED2024/2.png", 
                 "AFIED2024/3.png", "AFIED2024/4.png", "AFIED2024/5.png", "AFIED2024/6.png", 
                 "AFIED2024/7.png", "AFIED2024/8.png", "AFIED2024/9.png", "AFIED2024/10.png", 
-                "AFIED2024/11.png", "AFIED2024/12.png", "AFIED2024/13.png", "AFIED2024/14.png", 
+                "AFIED2024/11.png", "AFIED2022024/12.png", "AFIED2024/13.png", "AFIED2024/14.png", 
                 "AFIED2024/15.png", "AFIED2024/16.png", "AFIED2024/17.png", "AFIED2024/18.png", 
                 "AFIED2024/19.png", "AFIED2024/20.png", "AFIED2024/21.png", "AFIED2024/22.png"
             ]
